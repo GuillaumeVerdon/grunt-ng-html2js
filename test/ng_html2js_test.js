@@ -32,7 +32,7 @@ exports.ng_html2js = {
 
     var actual = grunt.file.read('test/tests/test.js');
     var expected = grunt.file.read('test/expected/expectedTestHTMLJs.js');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs.js');\
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs.js');
     test.done();
   },
   groupNormal: function(test) {
