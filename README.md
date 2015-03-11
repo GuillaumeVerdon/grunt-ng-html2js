@@ -1,7 +1,6 @@
 # grunt-ng-html2js
 
 [![Build Status](https://travis-ci.org/itsnydell/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
-[![Dependency Status](https://gemnasium.com/itsnydell/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
 
 Grunt wrapper for ng-html2js
 
