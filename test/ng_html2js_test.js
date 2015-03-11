@@ -31,21 +31,20 @@ exports.ng_html2js = {
     test.expect(1);
 
     var actual = grunt.file.read('test/tests/test.js');
-    var expected = grunt.file.read('test/expected/expectedTestHTMLJs');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs');
-
+    var expected = grunt.file.read('test/expected/expectedTestHTMLJs.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs.js');\
     test.done();
   },
   groupNormal: function(test) {
     test.expect(2);
 
     var actual = grunt.file.read('test/tests/test_group.js');
-    var expected = grunt.file.read('test/expected/expectedTestHTMLJs');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule');
+    var expected = grunt.file.read('test/expected/expectedTestHTMLJs.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs.js');
 
     var actual2 = grunt.file.read('test/tests/test2_group.js');
-    var expected2 = grunt.file.read('test/expected/expectedTestHTMLJs2');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs2');
+    var expected2 = grunt.file.read('test/expected/expectedTestHTMLJs2.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJs2.js');
 
     test.done();
   },
@@ -53,8 +52,8 @@ exports.ng_html2js = {
     test.expect(1);
 
     var actual = grunt.file.read('test/tests/test_module.js');
-    var expected = grunt.file.read('test/expected/expectedTestHTMLJsModule');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule');
+    var expected = grunt.file.read('test/expected/expectedTestHTMLJsModule.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule.js');
 
     test.done();
   },
@@ -62,12 +61,12 @@ exports.ng_html2js = {
     test.expect(2);
 
     var actual = grunt.file.read('test/tests/test_module_group.js');
-    var expected = grunt.file.read('test/expected/expectedTestHTMLJsModule');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule');
+    var expected = grunt.file.read('test/expected/expectedTestHTMLJsModule.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule.js');
 
     var actual2 = grunt.file.read('test/tests/test2_module_group.js');
-    var expected2 = grunt.file.read('test/expected/expectedTestHTMLJsModule2');
-    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule2');
+    var expected2 = grunt.file.read('test/expected/expectedTestHTMLJsModule2.js');
+    test.equal(actual, expected, 'should produce output that matches the contents of expectedTestHTMLJsModule2.js');
 
     test.done();
   },
