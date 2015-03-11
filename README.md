@@ -1,6 +1,9 @@
 # grunt-ng-html2js
 
-> Grunt wrapper for ng-html2js
+[![Build Status](https://travis-ci.org/itsnydell/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
+[![Dependency Status](https://gemnasium.com/itsnydell/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
+
+Grunt wrapper for ng-html2js
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -22,7 +25,7 @@ grunt.loadNpmTasks('grunt-ng-html2js');
 ### Overview
 In your project's Gruntfile, add a section named `ng_html2js` to the data object passed into `grunt.initConfig()`.
 
-```js
+```JavaScript
 grunt.initConfig({
   ng_html2js: {
     options: {
@@ -55,7 +58,7 @@ moduleVar is to be used with moduleName. If moduleVar is provided, it will pass 
 #### Default Options
 In this example, the default options are used and will take src/template.html and compile it to dest/template.js using the default module name 'module'
 
-```js
+```JavaScript
 grunt.initConfig({
     ng_html2js: {
         files: {
@@ -66,7 +69,8 @@ grunt.initConfig({
 ```
 
 the compiled file will be:
-```
+
+```JavaScript
 var module = angular.module('src/template.html', []);
 module.run(['$templateCache', function($templateCache) {
   $templateCache.put('src/template.html',
@@ -82,7 +86,7 @@ module.run(['$templateCache', function($templateCache) {
 #### Custom Options and folder of files to compile
 In this example, custom options are used to define the module name and module vars. It also takes in a group of files to compile into a folder of your choice.
 
-```js
+```JavaScript
 grunt.initConfig({
     ng_html2js: {
         options: {
@@ -102,7 +106,7 @@ grunt.initConfig({
 
 will output templates in this format:
 
-```
+```JavaScript
 var ngModule;
 try {
   ngModule = angular.module('testApp');
