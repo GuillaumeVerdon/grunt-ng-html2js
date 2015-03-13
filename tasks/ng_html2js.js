@@ -10,6 +10,7 @@
 
 var path = require('path');
 var nghtml2js = require('ng-html2js');
+var chalk = require('chalk');
 
 module.exports = function(grunt) {
 
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
             grunt.file.write(file.dest, output);
 
             // Log a successful compilation
-            grunt.log.writeln(file.src + ' compiled to ' + file.dest);
+            grunt.log.writeln(chalk.cyan(file.src) + ' compiled to ' + chalk.cyan(file.dest));
         });
     });
 
