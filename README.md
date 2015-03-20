@@ -1,4 +1,4 @@
-# grunt-ng-html2js v0.1.1 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
+# grunt-ng-html2js v0.1.2 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
 
 [![Build Status](https://travis-ci.org/itsnydell/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
 [![Build status](https://ci.appveyor.com/api/projects/status/29afqicugoqx3xr4?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
@@ -130,5 +130,6 @@ ngModule.run(['$templateCache', function ($templateCache) {
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-v0.1.1 - Misc package tweaks, no functionality updates. 
-v0.1.0 - First commit
+- v0.1.2 - Misc readme and package.json tweaks, no functionality updates. 
+- v0.1.1 - Misc package tweaks, no functionality updates. 
+- v0.1.0 - First commit
