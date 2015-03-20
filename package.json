@@ -46,7 +46,7 @@
     "angular",
     "angularjs",
     "template",
-    "html2js"
+    "html2js",
     "ng-html2js"
   ]
 }
