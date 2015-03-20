@@ -41,6 +41,12 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "grunt",
+    "gruntplugin",
+    "angular",
+    "angularjs",
+    "template",
+    "html2js"
+    "ng-html2js"
   ]
 }
