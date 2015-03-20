@@ -4,7 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/29afqicugoqx3xr4?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
 [![Dependency Status](https://gemnasium.com/itsnydell/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
 
-Grunt wrapper for ng-html2js
+Grunt wrapper for ng-html2js that turns your Angular templates into JavaScript and puts them in modules.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
