@@ -18,21 +18,30 @@ module.exports = function(grunt) {
 
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            moduleName: null,        // moduleName defaults to file name
-            moduleVar: 'module'   // moduleVar defaults to 'ngModule'
-        });
+                moduleName: null,        // moduleName defaults to file name
+                moduleVar: 'module',     // moduleVar defaults to 'ngModule'
+                output: 'verbose',       // 'verbose' (default) || 'simple' || 'none'
+                missingFiles: 'warn'     // 'ignore' || 'warn' (default) || 'fail'
+            }),
+            successCount = 0;
 
-        // compile each file asynchronously 
+        // compile each file asynchronously
         this.files.forEach(function(file) {
+
+            // If nonull isn't set, grunt errors silently, so let's not use grunt for that
+            // Assume that if grunt silently fails, then the file doesn't exist.
+            var fileExists = false,
+                srcFilePath = file.src.length ? file.src : file.orig.src;
 
             // Get the file's contents
             var content = file.src.filter(function(filepath) {
 
                 // Remove nonexistent files.
                 if (!grunt.file.exists(filepath)) {
-                    grunt.log.warn('Source file "' + filepath + '" not found.');
+                    // fileExists defaults to false so we don't have to do anything here
                     return false;
                 } else {
+                    fileExists = true;
                     return true;
                 }
 
@@ -43,15 +52,39 @@ module.exports = function(grunt) {
 
             }).join('');
 
-            // Run ng-html2js
-            var output = nghtml2js(file.src, content, options.moduleName, options.moduleVar);
+            if(!fileExists) {
+                var warnMessage = 'Source file "' + srcFilePath + '" not found.';
 
-            // Write the output file
-            grunt.file.write(file.dest, output);
+                switch(options.missingFiles){
+                    case 'warn':
+                        grunt.log.warn(warnMessage);
+                        break;
+                    case 'fail':
+                        grunt.fail.warn(warnMessage);
+                        break;
+                    default:
+                        break;
+                }
+            } else {
 
-            // Log a successful compilation
-            grunt.log.writeln(chalk.cyan(file.src) + ' compiled to ' + chalk.cyan(file.dest));
+                // Run ng-html2js
+                var output = nghtml2js(file.src, content, options.moduleName, options.moduleVar);
+
+                // Write the output file
+                grunt.file.write(file.dest, output);
+
+                // Log a successful compilation
+                if(options.output === 'verbose'){
+                    grunt.log.writeln(chalk.cyan(file.src) + ' compiled to ' + chalk.cyan(file.dest));
+                }
+
+                successCount++;
+            }
         });
+
+        if(options.output !== 'none') {
+            grunt.log.writeln(chalk.green( (options.output === 'verbose' ? '\n' : '') + successCount + ' of ' + this.files.length + ' templates compiled successfully.'));
+        }
     });
 
 };

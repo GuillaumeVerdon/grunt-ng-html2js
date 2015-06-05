@@ -1,4 +1,4 @@
-# grunt-ng-html2js v0.1.2 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
+# grunt-ng-html2js v0.2.0 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
 
 [![Build Status](https://travis-ci.org/itsnydell/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
 [![Build status](https://ci.appveyor.com/api/projects/status/29afqicugoqx3xr4?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
@@ -53,6 +53,20 @@ Type: `String`
 Default value: `'module'`
 
 moduleVar is to be used with moduleName. If moduleVar is provided, it will pass moduleVar to immediately-invoked function expression (IIFE). Its default value is "module".
+
+#### options.output
+Type: `String`
+Default value: `'verbose'`
+Available values: `'verbose'`, `'simple'`, `'none'`
+
+If you have a lot of templates to be compiled, your grunt output might get pretty crazy. You can hide every file compile message by using `'simple'` or hide all output from the task with `'none'`
+
+#### options.missingFiles
+Type: `String`
+Default value: `'warn'`
+Available values: `'ignore'`, `'warn'`, `'fail'`
+
+Tell grunt what to do if the file is missing. We default to just put a warning in console that the file is missing, but you can also have it ignored if you really don't care much, or fail if you want grunt to stop if the file is missing.
 
 ### Usage Examples
 
@@ -130,6 +144,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-- v0.1.2 - Misc readme and package.json tweaks, no functionality updates. 
-- v0.1.1 - Misc package tweaks, no functionality updates. 
+- v0.2.0 - Added output verbosity and missingFile warning options
+- v0.1.2 - Misc readme and package.json tweaks, no functionality updates.
+- v0.1.1 - Misc package tweaks, no functionality updates.
 - v0.1.0 - First commit
