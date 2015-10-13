@@ -1,7 +1,7 @@
 {
   "name": "grunt-ng-html2js",
   "description": "Grunt wrapper for ng-html2js",
-  "version": "v0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/complex-media/grunt-ng-html2js",
   "author": {
     "name": "Brandon Nydell",
