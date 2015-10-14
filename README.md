@@ -1,8 +1,7 @@
-# grunt-ng-html2js v0.2.0 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
+# grunt-ng-html2js v0.2.1
 
-[![Build Status](https://travis-ci.org/complex-media/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
-[![Build status](https://ci.appveyor.com/api/projects/status/coiy2dieyfpis5r8?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
-[![Dependency Status](https://gemnasium.com/complex-media/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
+[![Build Status](https://travis-ci.org/complex-media/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/complex-media/grunt-ng-html2js)
+[![Dependency Status](https://gemnasium.com/complex-media/grunt-ng-html2js.svg)](https://gemnasium.com/complex-media/grunt-ng-html2js)
 
 Grunt wrapper for ng-html2js that turns your Angular templates into JavaScript and puts them in modules.
 
@@ -144,6 +143,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+- v0.2.1 - Fix readme badges after move to Complex
 - v0.2.0 - Added output verbosity and missingFile warning options
 - v0.1.2 - Misc readme and package.json tweaks, no functionality updates.
 - v0.1.1 - Misc package tweaks, no functionality updates.
