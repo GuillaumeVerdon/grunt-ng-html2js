@@ -1,8 +1,8 @@
 # grunt-ng-html2js v0.2.0 ![](https://ga-beacon.appspot.com/UA-60632926-1/grunt-ng-html2js/readme?pixel)
 
-[![Build Status](https://travis-ci.org/itsnydell/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
-[![Build status](https://ci.appveyor.com/api/projects/status/29afqicugoqx3xr4?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
-[![Dependency Status](https://gemnasium.com/itsnydell/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
+[![Build Status](https://travis-ci.org/complex-media/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/itsnydell/grunt-ng-html2js)
+[![Build status](https://ci.appveyor.com/api/projects/status/coiy2dieyfpis5r8?svg=true)](https://ci.appveyor.com/project/itsnydell/grunt-ng-html2js)
+[![Dependency Status](https://gemnasium.com/complex-media/grunt-ng-html2js.svg)](https://gemnasium.com/itsnydell/grunt-ng-html2js)
 
 Grunt wrapper for ng-html2js that turns your Angular templates into JavaScript and puts them in modules.
 
