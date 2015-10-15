@@ -1,4 +1,4 @@
-# grunt-ng-html2js v0.2.1
+# grunt-ng-html2js v0.2.1 ![](https://ga-beacon.appspot.com/UA-68899481-1/grunt-ng-html2js/readme?pixel)
 
 [![Build Status](https://travis-ci.org/complex-media/grunt-ng-html2js.svg?branch=master)](https://travis-ci.org/complex-media/grunt-ng-html2js)
 [![Dependency Status](https://gemnasium.com/complex-media/grunt-ng-html2js.svg)](https://gemnasium.com/complex-media/grunt-ng-html2js)
